@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent compartilhar = new Intent(Intent.ACTION_SEND);
-                                compartilhar.setType("text/*");
+                                compartilhar.setType("*/*");
                                 compartilhar.putExtra(Intent.EXTRA_SUBJECT, mensagem.getNome());
                                 compartilhar.putExtra(Intent.EXTRA_TEXT, mensagem.getCorpo());
 
