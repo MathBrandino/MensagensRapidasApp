@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         .show();
 
 
-                return false;
+                return true;
             }
         });
 
