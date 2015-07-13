@@ -1,7 +1,6 @@
 package br.com.caelum.mensagensrapidasapp.Dao;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

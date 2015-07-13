@@ -3,16 +3,13 @@ package br.com.caelum.mensagensrapidasapp.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.List;
@@ -68,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent compartilhar = new Intent(Intent.ACTION_SEND);
-                                compartilhar.setType("*/*");
+                                compartilhar.setType("text/*");
                                 compartilhar.putExtra(Intent.EXTRA_SUBJECT, mensagem.getNome());
                                 compartilhar.putExtra(Intent.EXTRA_TEXT, mensagem.getCorpo());
 
