@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
                 final Mensagem mensagem = (Mensagem) parent.getItemAtPosition(position);
 
-                new AlertDialog.Builder(that).setTitle("O que deseja fazer com a mensagem : " + mensagem.getNome() + " ? ")
+                new AlertDialog.Builder(that).setMessage("O que deseja fazer com a mensagem : " + mensagem.getNome() + " ? ")
+                        .setTitle(" Atencao ")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
                         .setPositiveButton("Deletar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -66,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent compartilhar = new Intent(Intent.ACTION_SEND);
                                 compartilhar.setType("text/*");
-                                compartilhar.putExtra(Intent.EXTRA_SUBJECT, mensagem.getNome());
                                 compartilhar.putExtra(Intent.EXTRA_TEXT, mensagem.getCorpo());
 
                                 startActivity(Intent.createChooser(compartilhar, "Escolha aonde mandar sua mensagem"));
                             }
                         })
+                        .setNeutralButton("Cancelar", null)
                         .show();
 
 

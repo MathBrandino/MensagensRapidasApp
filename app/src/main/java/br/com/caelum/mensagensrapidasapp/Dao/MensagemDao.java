@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,7 +98,6 @@ public class MensagemDao extends SQLiteOpenHelper implements AutoCloseable {
 
         String [] args = {mensagem.getId().toString()};
 
-        Log.i("ALTERA", "ALTERANDO");
         getWritableDatabase().update(TABELAMensagens, values, "id=?", args);
     }
 }
