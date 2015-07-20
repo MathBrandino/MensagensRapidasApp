@@ -100,4 +100,10 @@ public class MensagemDao extends SQLiteOpenHelper implements AutoCloseable {
 
         getWritableDatabase().update(TABELAMensagens, values, "id=?", args);
     }
+
+    public void limpaTabela(){
+
+        getWritableDatabase().delete(TABELAMensagens, "", null);
+
+    }
 }
